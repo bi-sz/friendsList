@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const Header = (props) => {
   console.log('props of Header', props);
-  return <Text>{props.title}</Text>
+  return <Profile name="비" uri="" />
 }
 const MyProfile = () => {
   return <Text>MyProfile</Text>
@@ -14,20 +14,37 @@ const Division = () => {
 const FriendSection = () => {
   return <Text>FriendSection</Text>
 }
+const Profile = (props) => {
+  return (
+    <View style={{flexDirection: "row"}}>
+      <Image 
+        source={{uri: props.uri}}>
+        style={{
+          width: 30,
+          heigh: 30,
+        }}
+
+      </Image>
+      <Text>{props.name}</Text>
+    </View>
+  )
+}
+
 const FriendList = () => {
   return (
     <View>
-      <Text>미성</Text>
-      <Text>송이</Text>
-      <Text>재형</Text>
-      <Text>승수</Text>
-      <Text>채원</Text>
-      <Text>혜정</Text>
-      <Text>현석</Text>
-      <Text>호진</Text>
+      <Profile name="녜냥" uri="" />
+      <Profile name="미성" uri="" />
+      <Profile name="박재형" uri="" />
+      <Profile name="박승수" uri="" />
+      <Profile name="송츄" uri="" />
+      <Profile name="정민" uri="" />
+      <Profile name="채붕이" uri="" />
+      <Profile name="호진" uri="" />
     </View>
   );
 }
+
 
 export default function App() {
   return (
