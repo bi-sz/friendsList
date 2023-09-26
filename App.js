@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 const Header = (props) => {
   console.log('props of Header', props);
-  return <Profile name="비" uri="" />
+  return <Text>{props.title}</Text>
 }
 const MyProfile = () => {
-  return <Text>MyProfile</Text>
+  return <Profile name="비" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/bi.jpg" profileSize={40} />
 }
 const Division = () => {
   return <Text>Division</Text>
@@ -18,29 +18,29 @@ const Profile = (props) => {
   return (
     <View style={{flexDirection: "row"}}>
       <Image 
-        source={{uri: props.uri}}>
-        style={{
-          width: 30,
-          heigh: 30,
+        source={{uri: props.uri,
         }}
-
-      </Image>
+        style={{
+          width: props.profileSize,
+          height: props.profileSize,
+        }}
+      
+      />
       <Text>{props.name}</Text>
     </View>
   )
 }
-
 const FriendList = () => {
   return (
     <View>
-      <Profile name="녜냥" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Neow.jpg" />
-      <Profile name="미성" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Miseong.png" />
-      <Profile name="박재형" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Jaehyung.png" />
-      <Profile name="박승수" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/seungsoo.jpg" />
-      <Profile name="송츄" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/sonhChu.png" />
-      <Profile name="정민" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Jeongmin.png" />
-      <Profile name="채붕이" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Chaewon.jpg" />
-      <Profile name="호진" uri="" />
+      <Profile name="녜냥" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Neow.jpg" profileSize={30} />
+      <Profile name="미성" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Miseong.png" profileSize={30} />
+      <Profile name="박재형" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Jaehyung.png" profileSize={30}/>
+      <Profile name="박승수" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/seungsoo.jpg" profileSize={30}/>
+      <Profile name="송츄" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/sonhChu.png" profileSize={30}/>
+      <Profile name="정민" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Jeongmin.jpeg" profileSize={30}/>
+      <Profile name="채붕이" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Chaewon.jpg" profileSize={30}/>
+      <Profile name="호진" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Hojin.jpg" profileSize={30}/>
     </View>
   );
 }
