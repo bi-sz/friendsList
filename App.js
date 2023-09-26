@@ -38,7 +38,7 @@ const FriendList = () => {
       <Profile name="박재형" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Jaehyung.png" />
       <Profile name="박승수" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/seungsoo.jpg" />
       <Profile name="송츄" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/sonhChu.png" />
-      <Profile name="정민" uri="" />
+      <Profile name="정민" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Jeongmin.png" />
       <Profile name="채붕이" uri="https://raw.githubusercontent.com/bi-sz/friendsList/master/image/Chaewon.jpg" />
       <Profile name="호진" uri="" />
     </View>
